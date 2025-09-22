@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+ 
   <header class="header">
     <div class="header-container">
       <div class="menu-container">
@@ -107,7 +109,7 @@
             <span class="post-author">Неизвестный автор</span>
           </div>
           <div class="post-text">
-            <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть?</p>
+            <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть? </p>
           </div>
         </div>
       </article>
@@ -347,12 +349,54 @@
 
   <footer class="header-container footer-content">
     <div class="social-logos-container">
-      <a class="social-logo dribbble" href="#"></a>
-      <a class="social-logo pinterest" href="#"></a>
-      <a class="social-logo tumblr" href="#"></a>
+      <a class="social-logo dribbble" href="#" aria-label="Dribble"></a>
+      <a class="social-logo pinterest" href="#" aria-label="Pinterest"></a>
+      <a class="social-logo tumblr" href="#" aria-label="Tumblr"></a>
     </div>
     <p class="copyright">Copyright © 2009–2019 City Blog LLC.</p>
   </footer>
+
+
+    <input type="checkbox" id="popup-toggle" class="popup__checkbox">
+    <div class="popup">
+      <label for="popup-toggle" class="popup__close">&#128473;</label>
+        <div class="popup__content">
+            
+            <h2 class="popup__title">Ваш фидбек</h2>
+            <form action="" class="popup__form">
+                <label for="popup__select" class="popup__label">
+                    Как часто вы заходите на сайт?
+                    <div class="popup__select-wrapper">
+                        <select name="popup__select" id="popup__select" class="popup__select">
+                            <option value="1">Раз в день</option>
+                            <option value="2" selected>Почти каждый день</option>
+                            <option value="3">Раз в два дня</option>
+                            <option value="4">Раз в три дня</option>
+                        </select>
+                    </div>
+                </label>
+
+                <fieldset class="popup__subscribe">
+                    <legend class="popup__legend">Вы подписаны на e-mail рассылку?</legend>
+                    <div class="popup__radio">
+                        <input type="radio" name="popup__radio" id="popup__radio-yes" value="yes" checked>
+                        <label for="popup__radio-yes">Да</label>
+                    
+                        <input type="radio" name="popup__radio" id="popup__radio-no" value="no">
+                        <label for="popup__radio-no">Нет</label>
+                    </div>
+                </fieldset>
+                
+
+                <label for="popup__textarea" class="popup__label">
+                    Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+                    <textarea class="popup__textarea" name="popup__textarea" id="popup__textarea" cols="30" rows="5" placeholder="Может, больше рецептов?"></textarea>
+                </label>
+
+                <button type="submit" class="popup__button">Отправить</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 
