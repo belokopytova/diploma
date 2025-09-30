@@ -36,7 +36,7 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-image: url("../images/banner-bg.jpg");
   z-index: 0;
-  padding-top: 30px;
+  padding-top: 5px;
   padding-bottom: 125px;
 }
 
@@ -296,6 +296,17 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   line-height: 22px;
   color: #0f0d0e;
+}
+
+
+.post-text::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #eeeeee;
+    opacity: 0.4;
+    margin: 22px auto 0;
 }
 
 .post-text p:nth-child(n + 2) {
@@ -663,6 +674,7 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     justify-content: center; 
     align-items: center; 
     z-index: 9999;
+    overflow-y: auto;
 }
 
 ._hidden {
@@ -684,14 +696,13 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
     padding: 46px 30px 54px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: auto;
     max-width: 370px;
-    max-height: 80%;
-    overflow-y: auto;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     margin: auto 15px;
-    min-height: 545px;
+    
     row-gap: 12px;
     font-size: 13px;
 }
@@ -703,13 +714,15 @@ p, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .popup__close {
-    position: fixed;
-    top: 66px;
-    color: #ffffff;
-    margin-left: 26%;
+    position: absolute;
+    color: #ffffff;;
+    top: -34px;
+    right: -9px;
     cursor: pointer;
     font-size: 25px;
-    z-index: 10; 
+    z-index: 10;
+    border: none;
+    background: transparent; 
 }
 
 .popup__title {
@@ -870,15 +883,10 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     padding: 0 15px;
   }
 
-  .menu-panel {
-    justify-content: center;
-    padding-top: 225px;
-    margin-bottom: 31px;
-  }
-
   .menu-logo {
     width: 269px;
-    margin: auto
+    margin: auto;
+    margin-top: 50%;
   }
 
   .menu-list {
@@ -889,14 +897,19 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     width: calc(100% - 20px);
     max-width: 420px;
     margin: auto;
+    margin-top: -15%;
     font-size: 26px;
     line-height: 36px;
+  }
+  .popup {
+    padding-top: 40px;
   }
 
   .popup__content {
     width: 330px;
-    padding: 23px 26px 30px 24px;
+    padding: 30px 26px 30px 24px;
   }
+
 
   .popup__title {
     font-size: 16px;
@@ -950,13 +963,15 @@ p, ul, h1, h2, h3, h4, h5, h6 {
 
   .post {
     flex-direction: column;
-    margin-bottom: 33px;
-    border-bottom: 3px solid #eeeeee;
+    margin-bottom: 1%;
+    
   }
 
   .post-image {
     width: 100%;
     margin-right: 0;
+    height: auto;   
+    object-fit: contain;
   }
 
   .post-tags-list {
@@ -1045,6 +1060,7 @@ p, ul, h1, h2, h3, h4, h5, h6 {
 
   .product-image {
     width: 100%;
+
   }
 
   .product-title {
@@ -1116,6 +1132,10 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     font-size: 40px;
     line-height: 55px;
   }
+
+  .popup {
+    padding-top: 40px;
+  }
   
   .popup__content {
     padding: 47px 30px 54px;
@@ -1172,8 +1192,12 @@ p, ul, h1, h2, h3, h4, h5, h6 {
 
   .post {
     flex-direction: column;
-    margin-bottom: 42px;
-    border-bottom: 3px solid #eeeeee;
+    margin-bottom: calc(30% - 160px);
+    
+  }
+
+  .post-content {
+    margin-top: calc(30% - 150px);
   }
 
   .post:last-child {
@@ -1183,7 +1207,15 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   .post-image {
     width: 100%;
     margin-right: 0;
+    height: auto; 
+    object-fit: contain;
+    
   }
+
+  .post-text::after {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
 
   .post-tags-list {
     margin-top: 14px;
