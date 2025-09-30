@@ -304,7 +304,11 @@
     <h2 class="shop-title">Наши изделия</h2>
     <div class="products-container">
       <article class="product">
-        <img class="product-image" src="images/shop-item-desk1.jpg" alt="Pillows for sofa"> 
+        <picture class="our-products-picture">
+            <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+            <source media="(max-width: 1200px)" srcset="images/shop-item-tablet1.jpg">
+            <img class="product-image" src="images/shop-item-desk1.jpg" alt="Pillows for sofa">
+         </picture>    
         <div class="product-description">
           <h3 class="product-title">Подушки на диван</h3>
           <p class="product-text">Набор из двух подушек с модными принтами. Видео о создании <a href="#">здесь</a>.</p>
@@ -318,7 +322,11 @@
         </div>
       </article>
       <article class="product">
-        <img class="product-image" src="images/shop-item-desk2.jpg" alt="Rabbit toy">
+        <picture class="our-products-picture">
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet2.jpg">
+          <img class="product-image" src="images/shop-item-desk2.jpg" alt="Rabbit toy">
+        </picture>
         <div class="product-description">
           <h3 class="product-title">Кукла «Зайчик»</h3>
           <p class="product-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -331,7 +339,11 @@
         </div>
       </article>
       <article class="product">
-        <img class="product-image" src="images/shop-item-desk3.jpg" alt="decorative frame ">
+        <picture class="our-products-picture">
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet3.jpg">
+          <img class="product-image" src="images/shop-item-desk3.jpg" alt="decorative frame ">
+        </picture> 
         <div class="product-description">
           <h3 class="product-title">Шестиугольная рамка</h3>
           <p class="product-text">Необычная рамка для украшения дома из видео <a href="#">«Как сделать рамку из подручных средств за 30 минут»</a>.</p>
@@ -358,10 +370,10 @@
 
 
     <input type="checkbox" id="popup-toggle" class="popup__checkbox">
-    <div class="popup">
-      <label for="popup-toggle" class="popup__close">&#128473;</label>
+    <div class="popup _hidden">
+      
         <div class="popup__content">
-            
+          <button type="button" class="popup__close" aria-label="Закрыть">&#10006;</button>
             <h2 class="popup__title">Ваш фидбек</h2>
             <form action="" class="popup__form">
                 <label for="popup__select" class="popup__label">
