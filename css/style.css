@@ -16,6 +16,10 @@
        url(../fonts/OpenSans-Bold.woff2) format("woff2");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
@@ -77,6 +81,10 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   display: flex;
   list-style-type: none;
   padding-bottom: 3px;
+}
+
+.menu-burger {
+  display: none;
 }
 
 .menu-list-item:nth-child(n + 2) {
@@ -886,8 +894,34 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   .menu-logo {
     width: 269px;
     margin: auto;
-    margin-top: 50%;
+    margin-top: 40%;
   }
+
+  .menu-burger {
+    position: absolute;
+    width: 35px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+    cursor: pointer; 
+    background: none; 
+    border: none; 
+    right: 18px;
+    top: 35px;
+    z-index: 10;
+  }
+
+  .menu-burger span {
+    display: block;
+    width: 100%; 
+    height: 3px; 
+    background-color: #ffffff; 
+  }
+
+  .menu-burger:hover span{
+    background-color: #b59f5b;
+}
+  
 
   .menu-list {
     display: none;
@@ -1089,6 +1123,7 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   .trend:nth-child(n + 2) {
     margin-top: 3px;
   }
+
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -1099,6 +1134,7 @@ p, ul, h1, h2, h3, h4, h5, h6 {
   .trend:nth-child(n + 3) {
     margin-top: 3px;
   }
+
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -1111,9 +1147,30 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     padding: 0 35px;
   }
 
-  .menu-panel {
-    padding-top: 43px;
-    margin-bottom: 86px;
+  .menu-burger {
+    position: absolute;
+    width: 38px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+    cursor: pointer; 
+    background: none; 
+    border: none; 
+    right: 18px;
+    top: 35px;
+    z-index: 10;
+  }
+
+  .menu-burger span {
+    display: block;
+    width: 100%; 
+    height: 3px; 
+    background-color: #ffffff; 
+    
+  }
+
+  .menu-burger:hover span{
+    background-color: #b59f5b;
   }
 
   .menu-logo {
